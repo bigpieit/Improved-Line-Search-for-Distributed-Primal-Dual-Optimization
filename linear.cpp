@@ -413,7 +413,7 @@ static void solve_l2r_l1l2_svc(
 	int k=mpi_get_size();
 	if (beta > 0)
 	{
-		eta = beta / double(mpi_get_size());
+		eta = beta / double(mpi_get_size()); // mpi machine number 
 		allreduce_buffer = new double[reduce_length];
 	}
 	else
